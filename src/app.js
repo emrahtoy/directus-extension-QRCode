@@ -20,6 +20,16 @@ export default {
 				required: true
 			},
 		},
+		{
+			field: 'folder',
+			name: '$t:interfaces.system-folder.folder',
+			type: 'uuid',
+			meta: {
+				width: 'half',
+				interface: 'system-folder',
+				note: '$t:interfaces.system-folder.field_hint',
+			},
+		},
 	],
 };
 
