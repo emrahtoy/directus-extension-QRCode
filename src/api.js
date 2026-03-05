@@ -3,7 +3,7 @@ import qr from 'qr-image'; // CommonJS sous le capot, mais fonctionne avec impor
 
 export default {
 	id: 'qr-code',
-	handler: async ({ link }, { services, getSchema, accountability, logger }) => {
+	handler: async ({ link, folder }, { services, getSchema, accountability, logger }) => {
 		try {
 			if (!link) throw new Error('Paramètre "link" manquant');
 
@@ -28,6 +28,7 @@ export default {
 				filename_download: `qrcode_${safeName}.png`,
 				title: `QR Code - ${link}`,
 				type: 'image/png',
+				folder: folder || null
 			});
 
 			return fileId;
