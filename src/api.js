@@ -31,7 +31,7 @@ export default {
 				folder: folder || null
 			});
 
-			return fileId;
+			return {"fileId":fileId,"link":link,"folder":folder};
 		} catch (error) {
 			logger?.error?.('QR Code generation failed:', error);
 			throw error;
